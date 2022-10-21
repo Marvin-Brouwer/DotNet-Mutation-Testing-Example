@@ -1,0 +1,9 @@
+{
+	"stryker-config": {
+		"project": "ShoppingCart.Example.csproj",
+		"reporters": [
+			"progress",
+			"html"
+		]
+	}
+}
