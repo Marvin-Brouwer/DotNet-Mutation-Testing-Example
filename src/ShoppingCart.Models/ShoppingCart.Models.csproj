@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <!--  Define the MSBuild constant    -->
+	  <DefineConstants>STRONGLY_TYPED_ID_EMBED_ATTRIBUTES</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StronglyTypedId" Version="0.2.1" />
+    <PackageReference Include="StronglyTypedId.Attributes" Version="0.2.1" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

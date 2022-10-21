@@ -8,11 +8,14 @@
 
   <ItemGroup>
     <Folder Include="Factories\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="StronglyTypedId" Version="0.2.1" />
+    <PackageReference Include="Ardalis.GuardClauses" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShoppingCart.Models\ShoppingCart.Models.csproj" />
   </ItemGroup>
 
 </Project>

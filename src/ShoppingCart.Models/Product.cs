@@ -1,4 +1,4 @@
-namespace ShoppingCart.Example.Models;
+namespace ShoppingCart.Models;
 
 public sealed class Product
 {
@@ -7,9 +7,8 @@ public sealed class Product
     public string Description { get; init; } = default!;
 
     public decimal Price { get; init; }
-
-    private IReadOnlyCollection<ProductCategory> Categories { get; init; } = Array.Empty<ProductCategory>();
 }
 
-[StronglyTypedId]
+// This is just int to make the tests easier
+[StronglyTypedId(generateJsonConverter: false, backingType: StronglyTypedIdBackingType.Int)]
 public readonly partial struct ProductId { }
