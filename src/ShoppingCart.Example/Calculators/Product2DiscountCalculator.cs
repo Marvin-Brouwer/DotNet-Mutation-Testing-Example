@@ -1,5 +1,7 @@
 using ShoppingCart.Models;
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace ShoppingCart.Example.Calculators;
 public sealed class Product2DiscountCalculator : IPriceCalculator
 {
