@@ -2,12 +2,6 @@ using Ardalis.GuardClauses;
 
 using ShoppingCart.Models;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace ShoppingCart.Example.Services;
 
 public sealed class CartService : ICartService
