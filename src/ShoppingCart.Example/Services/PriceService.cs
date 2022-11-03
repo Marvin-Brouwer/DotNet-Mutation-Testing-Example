@@ -6,6 +6,7 @@ namespace ShoppingCart.Example.Services;
 public sealed class PriceService
 {
 	private readonly IEnumerable<IPriceCalculator> _priceCalculators;
+	private DefaultPriceCalculator _defaultPriceCalculator = new DefaultPriceCalculator();
 
 	public PriceService(IEnumerable<IPriceCalculator> priceCalculators)
 	{
@@ -23,7 +24,8 @@ public sealed class PriceService
 	private decimal CalculatePrice(CartItem cartItem)
 	{
 		var calculator = _priceCalculators
-			.First(c => c.CanCalculate(cartItem.Product));
+			.FirstOrDefault(c => c.CanCalculate(cartItem.Product))
+		    ?? _defaultPriceCalculator;
 
 		return calculator
 			.Calculate(cartItem.Product, cartItem.Quantity);

@@ -4,8 +4,6 @@ using ShoppingCart.Example.Calculators;
 using ShoppingCart.Example.Services;
 using ShoppingCart.Models;
 
-using System.Reflection;
-
 namespace ShoppingCart.Tests.Tests.Services;
 
 /// <summary>
@@ -15,7 +13,7 @@ public sealed class PriceServiceTests
 {
 	private readonly PriceService Sut = new (new List<IPriceCalculator>
 	{
-		new DefaultPriceCalculator(),
+		
 		new Product2DiscountCalculator()
 	});
 
@@ -39,7 +37,7 @@ public sealed class PriceServiceTests
 				},
 				new CartItem
 				{
-					Quantity = 1,
+					Quantity = 2,
 					Product = new Product
 					{
 						Id = new ProductId(7),
@@ -54,7 +52,7 @@ public sealed class PriceServiceTests
 		var result = Sut.CalculateTotalPrice(cart);
 
 		// Assert
-		result.Should().Be(45);
+		result.Should().Be(50);
 	}
 
 	[Fact]
@@ -77,7 +75,7 @@ public sealed class PriceServiceTests
 				},
 				new CartItem
 				{
-					Quantity = 1,
+					Quantity = 2,
 					Product = new Product
 					{
 						Id = new ProductId(7),
@@ -92,6 +90,6 @@ public sealed class PriceServiceTests
 		var result = Sut.CalculateTotalPrice(cart);
 
 		// Assert
-		result.Should().Be(55);
+		result.Should().Be(60);
 	}
 }
