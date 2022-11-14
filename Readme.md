@@ -1,9 +1,11 @@
-# Stryker example
+# Mutation example
 
 This is a practical example explaining why having 100% code coverage doesn't mean your tests are good.  
 
-## Running stryker
+## Running Stryker
 
+This repository uses [Stryker for dotnet](https://stryker-mutator.io/docs/stryker-net).  
+  
 To make it easier on you we've added a bash script in the root that runs stryker for you.  
 Just open the console in the root directory and run:
 

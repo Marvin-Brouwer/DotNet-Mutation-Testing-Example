@@ -51,21 +51,25 @@ public sealed class OrderServiceTests
 		result.Should().BeTrue();
 	}
 
-	//[Fact]
-	//public void CanOrder_CartHasAnItemWithZeroQuantity_ReturnsFalse()
-	//{
-	//	// Arrange
-	//	_cartMock
-	//		.SetupGet(cart => cart.Items)
-	//		.Returns(new HashSet<CartItem>(new[]
-	//		{
-	//			new CartItem { Quantity = 0 }
-	//		}));
+	#region Mutant killer
 
-	//	// Act
-	//	var result = _sut.CanOrder;
+	[Fact(Skip = "Missing mutant killer", DisplayName = "CanOrder_???_???")]
+	public void CanOrder_CartHasAnItemWithZeroQuantity_ReturnsFalse()
+	{
+		// Arrange
+		_cartMock
+			.SetupGet(cart => cart.Items)
+			.Returns(new HashSet<CartItem>(new[]
+			{
+				new CartItem { Quantity = 0 }
+			}));
 
-	//	// Assert
-	//	result.Should().BeFalse();
-	//}
+		// Act
+		var result = _sut.CanOrder;
+
+		// Assert
+		result.Should().BeFalse();
+	}
+
+	#endregion
 }
