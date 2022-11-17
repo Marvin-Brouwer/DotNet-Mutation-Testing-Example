@@ -1,0 +1,11 @@
+{
+	"stryker-config": {
+		"test-projects": [
+			"../ShoppingCart.Tests/ShoppingCart.Tests.csproj"
+		],
+		"reporters": [
+			"progress",
+			"html"
+		]
+	}
+}
