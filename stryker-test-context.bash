@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ##
 # This illustrates how to run stryker from the test project context
 # https://stryker-mutator.io/docs/stryker-net/operating-modes/#test-project-context
